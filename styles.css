@@ -1,0 +1,256 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f8fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header.hero {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-background.jpg') center/cover no-repeat;
+    color: #fff;
+}
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+header .logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+header .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+header .navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header .navbar ul li a:hover {
+    color: #00bcd4;
+}
+
+.hero-text h1 {
+    font-size: 3em;
+    margin: 0 0 20px;
+}
+
+.hero-text p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #00bcd4;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #008ba3;
+}
+
+.section {
+    padding: 80px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+#quienes-somos, #contacto {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#vision-mision {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+}
+
+.vision, .mision {
+    flex: 1;
+    text-align: center;
+    min-width: 280px;
+}
+
+.services .service-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.service-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33% - 40px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    min-width: 280px;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.service-item h4 {
+    color: #007acc;
+    margin-bottom: 15px;
+}
+
+.products .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.product-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(50% - 40px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    min-width: 280px;
+}
+
+.product-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.product-item h4 {
+    color: #007acc;
+    margin-bottom: 15px;
+}
+
+.product-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.product-images img {
+    max-width: 100%;
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact a {
+    color: #007acc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact a:hover {
+    color: #00bcd4;
+}
+
+.footer {
+    background-color: #007acc;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Animaciones */
+.hero-text {
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.service-item, .product-item {
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-text p {
+        font-size: 1.2em;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+    }
+
+    .service-item, .product-item {
+        flex: 1 1 calc(100% - 40px);
+    }
+
+    header .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #vision-mision {
+        flex-direction: column;
+    }
+
+    .product-images img {
+        max-width: 80%;
+    }
+}
